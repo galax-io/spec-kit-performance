@@ -1,0 +1,12 @@
+spec-kit-performance
+Copyright 2026 John Axe, Galaxio Team
+
+This product includes software developed as a spec-kit bundle
+(preset + extension) on top of GitHub spec-kit
+(https://github.com/github/spec-kit).
+
+Load-testing methodology patterns encoded in the constitution are generic,
+retrospective inspiration only. No specific platform, tool, or organization
+is assumed or integrated. Public tools named in the documentation
+(e.g. Gatling, k6, EARS, OpenSLO) are referenced as examples and remain the
+property of their respective owners.
