@@ -1,0 +1,1 @@
+../../../.specify/extensions/spectest/.specify-dev/agent-commands/claude/speckit-spectest-plan/SKILL.md

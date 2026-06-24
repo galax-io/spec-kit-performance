@@ -1,0 +1,1 @@
+../../../.specify/extensions/harness/.specify-dev/agent-commands/claude/speckit-harness-verify/SKILL.md

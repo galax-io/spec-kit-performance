@@ -1,0 +1,1 @@
+../../../.specify/extensions/changelog/.specify-dev/agent-commands/claude/speckit-changelog-generate/SKILL.md

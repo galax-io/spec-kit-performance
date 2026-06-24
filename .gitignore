@@ -22,6 +22,8 @@ desktop.ini
 .claude/settings.local.json
 .claude/*.local.json
 CLAUDE.local.md
+# Worktree scratch dirs (generated per session)
+.claude/worktrees/
 
 # --- spec-kit working state ---
 # Feature working dirs are generated per-run; commit deliberately, not by default.
@@ -29,6 +31,15 @@ specs/*/
 !specs/*/spec.md
 !specs/*/plan.md
 !specs/*/tasks.md
+
+# --- spec-kit generated/cache ---
+# Catalog HTTP cache — regenerated on every specify search/add.
+.specify/extensions/.cache/
+.specify/presets/.cache/
+# Dev-install staging dirs (only present when using --dev; not for distribution).
+.specify/extensions/*/.specify-dev/
+# Stray files inside extensions that shouldn't be tracked.
+.specify/extensions/worktrees/ADMIN_REPLY_SPEC_KIT_PR.md
 
 # --- Scala / sbt (future compiled helper-lib, per CLAUDE.md) ---
 target/
