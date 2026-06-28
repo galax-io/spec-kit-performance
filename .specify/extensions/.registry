@@ -31,23 +31,6 @@
       "registered_skills": [],
       "installed_at": "2026-06-24T19:24:44.560175+00:00"
     },
-    "spectest": {
-      "version": "1.0.0",
-      "source": "local",
-      "manifest_hash": "sha256:6916c685d9e993d8cf67eae087d3cf16e56b28779b9b46ffe22104da4ca0442b",
-      "enabled": true,
-      "priority": 10,
-      "registered_commands": {
-        "claude": [
-          "speckit.spectest.generate",
-          "speckit.spectest.coverage",
-          "speckit.spectest.gaps",
-          "speckit.spectest.plan"
-        ]
-      },
-      "registered_skills": [],
-      "installed_at": "2026-06-24T19:34:25.487234+00:00"
-    },
     "bug": {
       "version": "1.0.0",
       "source": "local",
@@ -116,6 +99,16 @@
       },
       "registered_skills": [],
       "installed_at": "2026-06-24T19:44:52.546956+00:00"
+    },
+    "spectest": {
+      "version": "1.0.0",
+      "source": "local",
+      "manifest_hash": "sha256:316a0349d05ae4728fcdd951e434eab96691b4e8f1e6e6fbe5e69f73207bb950",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {},
+      "registered_skills": [],
+      "installed_at": "2026-06-28T07:19:51.590221+00:00"
     }
   }
 }

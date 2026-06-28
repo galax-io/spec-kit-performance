@@ -133,8 +133,3 @@ tags:
   - "git"
   - "branching"
   - "workflow"
-
-config:
-  defaults:
-    branch_numbering: sequential
-    init_commit_message: "[Spec Kit] Initial commit"

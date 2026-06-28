@@ -68,14 +68,6 @@ hooks:
     description: Run claim verification after planning
     condition: null
   after_implement:
-  - extension: spectest
-    command: speckit.spectest.gaps
-    enabled: true
-    optional: true
-    priority: 10
-    prompt: Check for untested spec requirements?
-    description: Scan for spec requirements with no matching tests after implementation
-    condition: null
   - extension: git
     command: speckit.git.commit
     enabled: true
@@ -91,6 +83,14 @@ hooks:
     priority: 10
     prompt: Generate changelog entry for this implementation?
     description: Offer to generate changelog entry after implementation
+    condition: null
+  - extension: spectest
+    command: speckit.spectest.gaps
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Check for untested spec requirements?
+    description: Scan for spec requirements with no matching tests after implementation
     condition: null
   before_constitution:
   - extension: git

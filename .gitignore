@@ -38,8 +38,8 @@ specs/*/
 .specify/presets/.cache/
 # Dev-install staging dirs (only present when using --dev; not for distribution).
 .specify/extensions/*/.specify-dev/
-# Stray files inside extensions that shouldn't be tracked.
-.specify/extensions/worktrees/ADMIN_REPLY_SPEC_KIT_PR.md
+# Stray admin/reply files that sometimes land inside extension dirs.
+.specify/extensions/**/ADMIN_REPLY_*.md
 
 # --- Scala / sbt (future compiled helper-lib, per CLAUDE.md) ---
 target/
