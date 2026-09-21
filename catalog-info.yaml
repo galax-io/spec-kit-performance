@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spec-kit-performance
+  description: Spec-driven-development methodology and spec-kit bundle for performance/load testing
+  annotations:
+    github.com/project-slug: galax-io/spec-kit-performance
+spec:
+  type: tool
+  lifecycle: production
+  owner: galaxio
