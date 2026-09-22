@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-`spec-kit-performance` — designing a **spec-driven-development (SDD) methodology for performance/load testing**, built on GitHub [spec-kit](https://github.com/github/spec-kit) and encoding generic load-testing methodology patterns (retrospective inspiration) as a ratified "constitution". No specific platform/tool/org is assumed or integrated.
+`spec-kit-performance` — designing a **spec-driven-development (SDD) methodology for performance/load testing**, built on GitHub [spec-kit](https://github.com/github/spec-kit) and intended to encode generic load-testing methodology patterns (retrospective inspiration) as a "constitution". No specific platform/tool/org is assumed or integrated. That constitution has not been ratified: `.specify/memory/constitution.md` still holds the default, uncustomized spec-kit template text.
 
 Currently a **research & design repo** (no code yet). Design lives in [docs/](docs/README.md):
 - `docs/01-spec-kit-teardown.md` — how spec-kit works cover-to-cover (call graph, presets/extensions/bundles/workflows).

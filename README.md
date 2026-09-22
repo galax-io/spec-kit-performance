@@ -5,8 +5,8 @@
 [![Built on](https://img.shields.io/badge/built%20on-spec--kit-6f42c1.svg)](https://github.com/github/spec-kit)
 
 A **spec-driven-development (SDD) methodology for performance / load testing**, built on
-GitHub [spec-kit](https://github.com/github/spec-kit). It encodes generic load-testing
-methodology patterns as a ratified **constitution** and ships them as a spec-kit bundle —
+GitHub [spec-kit](https://github.com/github/spec-kit). It is designed to encode generic
+load-testing methodology patterns as a **constitution** and ship them as a spec-kit bundle —
 so a load-testing engagement runs as a governed, traceable, gated pipeline instead of a
 pile of ad-hoc scripts.
 
@@ -26,7 +26,9 @@ constitution + SUT                plain-language order           NFR prose → c
 - **Load engineers** bootstrap the repo (methodology + system-under-test), take the order, write
   the charter with NFRs in natural language, then **quantify** them into EARS SLOs compiled to a
   machine-readable `nfr.yml` — giving **numeric, traceable, real pass/fail** acceptance.
-- A ratified **constitution** governs everything.
+- A project **constitution** is intended to govern everything once ratified; today
+  [`.specify/memory/constitution.md`](.specify/memory/constitution.md) still holds the
+  default, uncustomized spec-kit template text and has not yet been ratified.
 
 ## Packaging
 
@@ -76,6 +78,7 @@ CLAUDE.md        Guidance for Claude Code working in this repo
 4. [04 — spec-kit-performance design](docs/04-perf-speckit-design.md) — the proposed 4-phase / 2-actor flow, the order skill, NFR → EARS → numeric gate.
 5. [06 — Decision: stack choice + harness](docs/06-decision-stack-and-harness.md) — own vs embed vs other; the campaign-vs-fleet harness model.
 6. [ADR-0001 — packaging approach](docs/adr/0001-perf-testing-sdd-approach.md) — decision to ship as a bundle (preset + extension), automated by a workflow.
+7. [07 — Phase-1 implementation plan](docs/07-impl-plan-phase1.md) — first buildable slice: bundle/install skeleton → constitution preset → order intake.
 
 Full index: [`docs/README.md`](docs/README.md).
 
