@@ -5,7 +5,11 @@ metadata:
   description: Spec-driven-development methodology and spec-kit bundle for performance/load testing
   annotations:
     github.com/project-slug: galax-io/spec-kit-performance
+    galaxio.io/plans.docker-images: "runtime: the build-and-run phase runs tests in the images"
+    galaxio.io/uses.spec-kit-galaxio-bootstrap: "process: created from the template, takes process updates via copier update"
 spec:
   type: tool
   lifecycle: production
   owner: galaxio
+  dependsOn:
+    - component:default/spec-kit-galaxio-bootstrap
