@@ -9,7 +9,7 @@ metadata:
     galaxio.io/uses.spec-kit-galaxio-bootstrap: "process: created from the template, takes process updates via copier update"
 spec:
   type: tool
-  lifecycle: production
+  lifecycle: experimental
   owner: galaxio
   dependsOn:
     - component:default/spec-kit-galaxio-bootstrap

@@ -1,6 +1,6 @@
 # spec-kit-performance — research & design
 
-Spec-driven-development (SDD) methodology for **performance/load testing**, built on GitHub spec-kit, intended to encode generic load-testing methodology patterns (retrospective inspiration) as a constitution — not yet ratified; see the status note below.
+Spec-driven-development (SDD) methodology for **performance/load testing**, built on GitHub spec-kit, intended to encode generic load-testing methodology patterns (retrospective inspiration) as a constitution (a planned preset template; the constitution of this repository itself is ratified, see the status note below).
 
 ## Read in order
 
@@ -23,4 +23,4 @@ Two front-door actors. The **customer** files a *plain-language* order through a
 
 > Methodology patterns are generic, retrospective inspiration (doc 03) — no specific platform is assumed or integrated.
 >
-> **Status:** [`.specify/memory/constitution.md`](../.specify/memory/constitution.md) still holds the default, uncustomized spec-kit template text and has not yet been ratified.
+> **Status:** [`.specify/memory/constitution.md`](../.specify/memory/constitution.md) is the ratified constitution of this repository (it governs how the repository changes). The methodology's own constitution, shipped to users, is a planned preset template and does not exist yet.
