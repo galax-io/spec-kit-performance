@@ -26,9 +26,10 @@ constitution + SUT                plain-language order           NFR prose → c
 - **Load engineers** bootstrap the repo (methodology + system-under-test), take the order, write
   the charter with NFRs in natural language, then **quantify** them into EARS SLOs compiled to a
   machine-readable `nfr.yml` — giving **numeric, traceable, real pass/fail** acceptance.
-- A project **constitution** is intended to govern everything once ratified; today
-  [`.specify/memory/constitution.md`](.specify/memory/constitution.md) still holds the
-  default, uncustomized spec-kit template text and has not yet been ratified.
+- The **constitution of this repository** is ratified
+  ([`.specify/memory/constitution.md`](.specify/memory/constitution.md)); it governs how the
+  repository changes, not the methodology it will ship. The methodology's own constitution is a
+  planned preset template (`constitution-template.md`) and does not exist yet.
 
 ## Packaging
 
