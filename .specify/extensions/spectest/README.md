@@ -20,10 +20,10 @@ The SpecTest extension adds four commands that connect specs to tests:
 
 | Command | Purpose | Modifies Files? |
 |---------|---------|-----------------|
-| `/spectest.generate` | Generate test scaffolds from spec acceptance criteria and scenarios | Yes — creates test files |
-| `/spectest.coverage` | Map spec requirements to test files with requirement-level coverage | No — read-only |
-| `/spectest.gaps` | Find requirements with no matching tests and suggest what to test | No — read-only |
-| `/spectest.plan` | Generate a structured test plan document from spec scenarios | Yes — writes test-plan.md |
+| `/speckit.spectest.generate` | Generate test scaffolds from spec acceptance criteria and scenarios | Yes — creates test files |
+| `/speckit.spectest.coverage` | Map spec requirements to test files with requirement-level coverage | No — read-only |
+| `/speckit.spectest.gaps` | Find requirements with no matching tests and suggest what to test | No — read-only |
+| `/speckit.spectest.plan` | Generate a structured test plan document from spec scenarios | Yes — writes test-plan.md |
 
 ## Installation
 
@@ -42,12 +42,12 @@ specify extension add --from https://github.com/Quratulain-bilal/spec-kit-specte
 /speckit.implement  → code         Feature built
                     → ???          Are the criteria actually tested?
 
-/spectest.generate → tests     ← SpecTest fills this gap
+/speckit.spectest.generate → tests     ← SpecTest fills this gap
 ```
 
 ### What Gets Generated
 
-**`/spectest.generate`** reads spec artifacts and produces framework-native test scaffolds:
+**`/speckit.spectest.generate`** reads spec artifacts and produces framework-native test scaffolds:
 
 ```typescript
 /**
@@ -83,7 +83,7 @@ describe('User Signup', () => {
 });
 ```
 
-**`/spectest.coverage`** maps every requirement to its test status:
+**`/speckit.spectest.coverage`** maps every requirement to its test status:
 
 ```markdown
 ## Requirement Coverage
@@ -103,7 +103,7 @@ describe('User Signup', () => {
 | **Overall** | **11** | **8** | **72.7%** |
 ```
 
-**`/spectest.gaps`** finds what's missing and tells you exactly what to test:
+**`/speckit.spectest.gaps`** finds what's missing and tells you exactly what to test:
 
 ```markdown
 ## Untested Requirements
@@ -118,7 +118,7 @@ describe('User Signup', () => {
 2. 🟡 Email verification — user-facing flow
 ```
 
-**`/spectest.plan`** generates a complete test plan document:
+**`/speckit.spectest.plan`** generates a complete test plan document:
 
 ```markdown
 ## Test Cases: REQ-001 User Signup
@@ -148,20 +148,20 @@ Acceptance: All P1 tests must pass.
 /speckit.implement                   ← Build it
        │
        ▼
-/spectest.plan                   ← Generate test plan from spec
-/spectest.generate               ← Generate test scaffolds
+/speckit.spectest.plan                   ← Generate test plan from spec
+/speckit.spectest.generate               ← Generate test scaffolds
        │
        ▼
 Fill in test implementations
        │
        ▼
-/spectest.coverage               ← Verify requirement coverage
-/spectest.gaps                   ← Find what's still untested
+/speckit.spectest.coverage               ← Verify requirement coverage
+/speckit.spectest.gaps                   ← Find what's still untested
 ```
 
 ## Commands
 
-### `/spectest.generate`
+### `/speckit.spectest.generate`
 
 Generates framework-native test scaffolds from spec artifacts:
 
@@ -173,7 +173,7 @@ Generates framework-native test scaffolds from spec artifacts:
 - Never overwrites existing test files
 - Includes traceability comments linking each test to its spec source
 
-### `/spectest.coverage`
+### `/speckit.spectest.coverage`
 
 Maps spec requirements to existing tests and calculates coverage:
 
@@ -183,7 +183,7 @@ Maps spec requirements to existing tests and calculates coverage:
 - Coverage by category (requirements, scenarios, criteria, decisions)
 - Threshold comparison with pass/fail status
 
-### `/spectest.gaps`
+### `/speckit.spectest.gaps`
 
 Finds untested requirements with actionable suggestions:
 
@@ -193,7 +193,7 @@ Finds untested requirements with actionable suggestions:
 - Prioritized action list with estimated effort
 - CI-friendly one-line summary output
 
-### `/spectest.plan`
+### `/speckit.spectest.plan`
 
 Generates a structured test plan document:
 

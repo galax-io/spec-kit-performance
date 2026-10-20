@@ -21,8 +21,8 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
 ## Prerequisites
 
 1. Confirm you are inside a git repository.
-2. Verify `.specify/` directory exists with at least `spec.md`.
-3. Retrieve the full git log for `.specify/spec.md` using `git log --oneline --follow -- .specify/spec.md`.
+2. Resolve the active feature by running `.specify/scripts/bash/check-prerequisites.sh --json` from the repo root and parsing `FEATURE_DIR` and `AVAILABLE_DOCS`. The spec artifacts live in `$FEATURE_DIR/` (under `specs/<feature>/`), not under `.specify/`. Always quote `"$FEATURE_DIR"` in shell snippets — the resolved value is absolute and may contain spaces.
+3. Retrieve the full git log for `"$FEATURE_DIR/spec.md"` using `git log --oneline --follow -- "$FEATURE_DIR/spec.md"`.
 4. If `plan.md` exists, retrieve its history too.
 5. If `tasks.md` exists, retrieve its history too.
 
@@ -31,7 +31,7 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
 1. **Collect History**: Get all committed versions of spec artifacts.
 
    ```bash
-   git log --oneline --follow --format="%H %ad %s" --date=short -- .specify/spec.md
+   git log --oneline --follow --format="%H %ad %s" --date=short -- "$FEATURE_DIR/spec.md"
    ```
 
 2. **Diff Each Version**: For each consecutive pair of commits, extract what changed.

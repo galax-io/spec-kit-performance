@@ -21,10 +21,10 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
 ## Prerequisites
 
 1. Confirm you are inside a git repository.
-2. Verify `.specify/` directory exists with at least `spec.md`.
+2. Resolve the active feature by running `.specify/scripts/bash/check-prerequisites.sh --json` from the repo root and parsing `FEATURE_DIR` and `AVAILABLE_DOCS`. The spec artifacts live in `$FEATURE_DIR/` (under `specs/<feature>/`), not under `.specify/`.
 3. Identify the version boundaries:
-   - If tag specified: `git log <previous-tag>..<tag> -- .specify/`
-   - If date range: `git log --after="<start>" --before="<end>" -- .specify/`
+   - If tag specified: `git log <previous-tag>..<tag> -- "$FEATURE_DIR"`
+   - If date range: `git log --after="<start>" --before="<end>" -- "$FEATURE_DIR"`
    - If no range: use all commits since the previous tag or first commit
 4. Read the current spec.md and the baseline version.
 

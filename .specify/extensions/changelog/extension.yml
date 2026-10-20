@@ -16,22 +16,22 @@ provides:
   commands:
     - name: speckit.changelog.generate
       file: commands/speckit.changelog.generate.md
-      description: "Generate a changelog entry from spec git history and requirement diffs"
+      description: "Generate full changelog from spec history"
     - name: speckit.changelog.release
       file: commands/speckit.changelog.release.md
-      description: "Generate release notes from spec changelog entries"
+      description: "Generate release notes for a specific version"
     - name: speckit.changelog.diff
       file: commands/speckit.changelog.diff.md
-      description: "Show requirement diffs between two spec versions"
+      description: "Human-readable diff between spec versions"
     - name: speckit.changelog.notify
       file: commands/speckit.changelog.notify.md
-      description: "Send changelog notifications to configured channels"
+      description: "Generate stakeholder notifications from changes"
 
 hooks:
   after_implement:
     command: speckit.changelog.generate
     optional: true
-    prompt: "Generate changelog entry for this implementation?"
+    prompt: "Generate a changelog entry for this change?"
     description: "Offer to generate changelog entry after implementation"
 
 tags:

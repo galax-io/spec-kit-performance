@@ -1,5 +1,10 @@
 ---
-description: "Generate test scaffolds from spec acceptance criteria and user scenarios"
+name: speckit-spectest-generate
+description: Generate test scaffolds from spec acceptance criteria and user scenarios
+compatibility: Requires spec-kit project structure with .specify/ directory
+metadata:
+  author: Quratulain-bilal
+  source: spectest:commands/speckit.spectest.generate.md
 ---
 
 # Generate Test Scaffolds from Spec
@@ -22,7 +27,7 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
 ## Prerequisites
 
 1. Confirm you are inside a git repository.
-2. Verify `.specify/` directory exists with at least `spec.md`. If missing, stop with error: "Cannot generate tests without spec.md — run `/speckit.specify` first."
+2. Resolve the active feature by running `.specify/scripts/bash/check-prerequisites.sh --json` from the repo root and parsing `FEATURE_DIR` and `AVAILABLE_DOCS`. The spec lives at `$FEATURE_DIR/spec.md` (under `specs/<feature>/`), not under `.specify/`. If missing, stop with error: "Cannot generate tests without spec.md — run `/speckit.specify` first."
 3. Read `spec.md` completely to extract acceptance criteria, user scenarios, requirements, and success criteria.
 4. If `plan.md` exists, read it to understand architecture, file structure, and technical decisions.
 5. If `tasks.md` exists, read it to understand implementation phases and completed work.

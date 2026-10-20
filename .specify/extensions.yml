@@ -18,14 +18,6 @@ hooks:
     prompt: Execute speckit.agent-context.update?
     description: Refresh agent context after specification
     condition: null
-  - extension: worktrees
-    command: speckit.worktrees.create
-    enabled: true
-    optional: false
-    priority: 10
-    prompt: Execute speckit.worktrees.create?
-    description: Auto-spawn a worktree after a new feature is specified
-    condition: null
   - extension: git
     command: speckit.git.commit
     enabled: true
@@ -33,6 +25,14 @@ hooks:
     priority: 10
     prompt: Commit specification changes?
     description: Auto-commit after specification
+    condition: null
+  - extension: worktrees
+    command: speckit.worktrees.create
+    enabled: true
+    optional: false
+    priority: 10
+    prompt: Execute speckit.worktrees.create?
+    description: Auto-spawn a worktree after a new feature is specified
     condition: null
   - extension: harness
     command: speckit.harness.init
@@ -66,31 +66,6 @@ hooks:
     priority: 10
     prompt: Verify plan claims against primary sources and the harness evidence base?
     description: Run claim verification after planning
-    condition: null
-  after_implement:
-  - extension: spectest
-    command: speckit.spectest.gaps
-    enabled: true
-    optional: true
-    priority: 10
-    prompt: Check for untested spec requirements?
-    description: Scan for spec requirements with no matching tests after implementation
-    condition: null
-  - extension: git
-    command: speckit.git.commit
-    enabled: true
-    optional: true
-    priority: 10
-    prompt: Commit implementation changes?
-    description: Auto-commit after implementation
-    condition: null
-  - extension: changelog
-    command: speckit.changelog.generate
-    enabled: true
-    optional: true
-    priority: 10
-    prompt: Generate changelog entry for this implementation?
-    description: Offer to generate changelog entry after implementation
     condition: null
   before_constitution:
   - extension: git
@@ -199,6 +174,31 @@ hooks:
     priority: 10
     prompt: Commit task changes?
     description: Auto-commit after task generation
+    condition: null
+  after_implement:
+  - extension: git
+    command: speckit.git.commit
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Commit implementation changes?
+    description: Auto-commit after implementation
+    condition: null
+  - extension: spectest
+    command: speckit.spectest.gaps
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Check for untested spec requirements?
+    description: Scan for spec requirements with no matching tests after implementation
+    condition: null
+  - extension: changelog
+    command: speckit.changelog.generate
+    enabled: true
+    optional: true
+    priority: 10
+    prompt: Generate a changelog entry for this change?
+    description: Offer to generate changelog entry after implementation
     condition: null
   after_checklist:
   - extension: git
