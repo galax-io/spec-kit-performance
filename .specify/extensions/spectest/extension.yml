@@ -14,22 +14,22 @@ requires:
 
 provides:
   commands:
-    - name: spectest.generate
-      file: commands/spectest.generate.md
+    - name: speckit.spectest.generate
+      file: commands/speckit.spectest.generate.md
       description: "Generate test scaffolds from spec acceptance criteria and user scenarios"
-    - name: spectest.coverage
-      file: commands/spectest.coverage.md
+    - name: speckit.spectest.coverage
+      file: commands/speckit.spectest.coverage.md
       description: "Map spec requirements to test files and calculate requirement-level coverage"
-    - name: spectest.gaps
-      file: commands/spectest.gaps.md
+    - name: speckit.spectest.gaps
+      file: commands/speckit.spectest.gaps.md
       description: "Find spec requirements with no matching tests and suggest what to test"
-    - name: spectest.plan
-      file: commands/spectest.plan.md
+    - name: speckit.spectest.plan
+      file: commands/speckit.spectest.plan.md
       description: "Generate a structured test plan document from spec scenarios and success criteria"
 
 hooks:
   after_implement:
-    command: spectest.gaps
+    command: speckit.spectest.gaps
     optional: true
     prompt: "Check for untested spec requirements?"
     description: "Scan for spec requirements with no matching tests after implementation"

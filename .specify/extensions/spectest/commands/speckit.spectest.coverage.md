@@ -21,10 +21,10 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
 ## Prerequisites
 
 1. Confirm you are inside a git repository.
-2. Verify `.specify/` directory exists with at least `spec.md`.
+2. Resolve the active feature by running `.specify/scripts/bash/check-prerequisites.sh --json` from the repo root and parsing `FEATURE_DIR` and `AVAILABLE_DOCS`. The spec lives at `$FEATURE_DIR/spec.md` (under `specs/<feature>/`), not under `.specify/`.
 3. Read `spec.md` to extract all requirements, scenarios, and success criteria.
 4. Locate test files in the project by searching common test directories and patterns (`**/*.test.*`, `**/*.spec.*`, `**/test_*`, `tests/`, `__tests__/`).
-5. If no test files are found, report 0% coverage and suggest running `/spectest.generate`.
+5. If no test files are found, report 0% coverage and suggest running `/speckit.spectest.generate`.
 
 ## Outline
 

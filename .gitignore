@@ -38,8 +38,6 @@ specs/*/
 .specify/presets/.cache/
 # Dev-install staging dirs (only present when using --dev; not for distribution).
 .specify/extensions/*/.specify-dev/
-# Stray files inside extensions that shouldn't be tracked.
-.specify/extensions/worktrees/ADMIN_REPLY_SPEC_KIT_PR.md
 
 # --- Scala / sbt (future compiled helper-lib, per CLAUDE.md) ---
 target/
@@ -72,3 +70,10 @@ venv/
 *.pem
 *.key
 secrets.*
+
+# Spec Kit: Python caches and the CLI state, which the kit does not ship (scripts/check-speckit.sh)
+.specify/extensions/.registry
+.specify/extensions/.backup/
+.specify/presets/.registry
+.specify/integrations/*.manifest.json
+.specify/workflows/workflow-registry.json

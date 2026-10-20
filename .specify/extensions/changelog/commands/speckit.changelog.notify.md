@@ -21,8 +21,8 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
 ## Prerequisites
 
 1. Confirm you are inside a git repository.
-2. Verify `.specify/` directory exists with at least `spec.md`.
-3. Get recent spec changes: `git log --oneline -10 -- .specify/spec.md`.
+2. Resolve the active feature by running `.specify/scripts/bash/check-prerequisites.sh --json` from the repo root and parsing `FEATURE_DIR` and `AVAILABLE_DOCS`. The spec artifacts live in `$FEATURE_DIR/` (under `specs/<feature>/`), not under `.specify/`. Always quote `"$FEATURE_DIR"` in shell snippets — the resolved value is absolute and may contain spaces.
+3. Get recent spec changes: `git log --oneline -10 -- "$FEATURE_DIR/spec.md"`.
 4. Read the current spec.md.
 5. Read the previous version for comparison.
 6. If plan.md or tasks.md changed, include those changes.

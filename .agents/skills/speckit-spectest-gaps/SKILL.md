@@ -1,5 +1,10 @@
 ---
-description: "Find spec requirements with no matching tests and suggest what to test"
+name: speckit-spectest-gaps
+description: Find spec requirements with no matching tests and suggest what to test
+compatibility: Requires spec-kit project structure with .specify/ directory
+metadata:
+  author: Quratulain-bilal
+  source: spectest:commands/speckit.spectest.gaps.md
 ---
 
 # Find Untested Requirements
@@ -21,7 +26,7 @@ You **MUST** consider the user input before proceeding (if not empty). The user 
 ## Prerequisites
 
 1. Confirm you are inside a git repository.
-2. Verify `.specify/` directory exists with at least `spec.md`.
+2. Resolve the active feature by running `.specify/scripts/bash/check-prerequisites.sh --json` from the repo root and parsing `FEATURE_DIR` and `AVAILABLE_DOCS`. The spec lives at `$FEATURE_DIR/spec.md` (under `specs/<feature>/`), not under `.specify/`.
 3. Read `spec.md` to extract all requirements, scenarios, and success criteria.
 4. Locate existing test files in the project.
 5. If `tasks.md` exists, read it to understand which phases are complete (only flag gaps for completed phases).
