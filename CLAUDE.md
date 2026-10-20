@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+**Constitution:** the principles of this repository are in `.specify/memory/constitution.md`; where they conflict with this file, the constitution wins.
+
 ## Project
 
 `spec-kit-performance` — designing a **spec-driven-development (SDD) methodology for performance/load testing**, built on GitHub [spec-kit](https://github.com/github/spec-kit) and intended to encode generic load-testing methodology patterns (retrospective inspiration) as a "constitution". No specific platform/tool/org is assumed or integrated. That constitution has not been ratified: `.specify/memory/constitution.md` still holds the default, uncustomized spec-kit template text.
